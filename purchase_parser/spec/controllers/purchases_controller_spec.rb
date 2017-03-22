@@ -26,13 +26,14 @@ RSpec.describe PurchasesController, type: :controller do
     end
 
     context 'when its a failure upload' do
-      it do
+      before do
         expect(Purchase).to receive(:load_from!).and_raise
+        post :create, purchases: { file: file }
       end
 
-      after do
-        post :create, purchases: { file: file }
-        expect(response).to redirect_to(:purchases)
+      it do
+        expect(flash[:error]).to be_present
+        expect(response).to render_template(:new)
       end
     end
   end

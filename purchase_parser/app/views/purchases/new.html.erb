@@ -2,3 +2,10 @@
   <%= f.file_field :file %>
   <%= f.submit 'Enviar' %>
 <% end %>
+
+<% flash.each do |key, value| %>
+  <div>
+    <b><%= value %></b>
+  </div>
+<% end %>
+

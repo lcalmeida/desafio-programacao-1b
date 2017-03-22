@@ -9,5 +9,8 @@ class PurchasesController < ApplicationController
     Purchase.load_from!(uploaded_io)
 
     redirect_to purchases_path
+  rescue => e
+    flash.now[:error] = 'Invalid file'
+    render :new
   end
 end

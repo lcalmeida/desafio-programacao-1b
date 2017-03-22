@@ -1,0 +1,30 @@
+<h1>Listagem de compras</h1>
+
+<table>
+  <tr>
+    <th>Comprador</th>
+    <th>Descrição</th>
+    <th>Preço unitário</th>
+    <th>Quantidade</th>
+    <th>Endereço</th>
+    <th>Fornecedor</th>
+  </tr>
+
+  <% @purchases.each do |purchase| %>
+    <tr>
+      <td><%= purchase.customer %></td>
+      <td><%= purchase.description %></td>
+      <td><%= purchase.unit_price %></td>
+      <td><%= purchase.amount %></td>
+      <td><%= purchase.address %></td>
+      <td><%= purchase.provider %></td>
+    </tr>
+  <% end %>
+</table>
+
+<h1>Receita Bruta: R$ <%= @gross_revenue %></h1>
+
+<br>
+
+<%= link_to 'Carregar novas compras', new_purchase_path %>
+

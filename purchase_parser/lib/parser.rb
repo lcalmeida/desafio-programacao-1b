@@ -1,3 +1,10 @@
+# This class parses each line of an +input_io+ to a list of object models
+#
+# To initialize this, use a mapper class
+# This Mapper class needs respond to a `remap` method which receives the
+# first_line of the file and remap this readers to the model attributes,
+# and contains a constant named MODEL which specifies the model to be parsed
+#
 class Parser
   def initialize(mapper, separator = /\t/)
     @mapper = mapper

@@ -6,8 +6,8 @@ class PurchasesController < ApplicationController
 
   def create
     uploaded_io = params[:purchases][:file]
-    binding.pry
-    puts uploaded_io.read
+    Purchase.load_from!(uploaded_io)
+
     redirect_to purchases_path
   end
 end

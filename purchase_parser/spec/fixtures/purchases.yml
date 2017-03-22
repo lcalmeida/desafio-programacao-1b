@@ -1,0 +1,8 @@
+purchase_1:
+  unit_price: 2.5
+  amount: 2
+
+purchase_2:
+  unit_price: 3.7
+  amount: 3
+

@@ -8,7 +8,6 @@ class Purchase < ActiveRecord::Base
   def self.load_from!(uploaded_io)
     parser = Parser.new(PurchaseFileMapper)
     purchases = parser.parse(uploaded_io)
-
     Purchase.transaction do
       purchases.each(&:save!)
     end

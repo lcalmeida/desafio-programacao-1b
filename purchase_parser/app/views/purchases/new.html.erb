@@ -1,11 +1,6 @@
+<h2>Selecione o arquivo com as vendas</h2>
 <%= form_for :purchases, url: purchases_path do |f| %>
   <%= f.file_field :file %>
-  <%= f.submit 'Enviar' %>
-<% end %>
-
-<% flash.each do |key, value| %>
-  <div>
-    <b><%= value %></b>
-  </div>
+  <%= f.submit 'Enviar', class: 'button' %>
 <% end %>
 

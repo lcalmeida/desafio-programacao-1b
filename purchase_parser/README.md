@@ -7,7 +7,7 @@ With a recent Docker version run the code bellow at the project directory *(purc
 
 `docker build -t purchase_parser . `
 
-> Sorry for not doing a docker pull yet
+> Sorry for not doing a docker push yet
 
 This command should take some minutes at first time.
 After this, run the follow comand to access.

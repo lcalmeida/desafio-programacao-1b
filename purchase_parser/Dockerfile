@@ -1,4 +1,4 @@
-FROM ruby:2.1.8
+FROM ruby:2.1.10
 
 RUN mkdir /app
 
